@@ -14,9 +14,23 @@
 
     body {
     	font-family: 'Roboto', sans-serif;
- background: rgb(38,54,171);
-background: linear-gradient(0deg, rgba(38,54,171,1) 0%, rgba(30,140,147,1) 19%, rgba(79,176,128,1) 38%, rgba(100,139,206,1) 58%, rgba(99,49,226,1) 80%, rgba(12,36,240,1) 100%); 
+        background: rgb(38,54,171);
+        background: linear-gradient(0deg, rgba(38,54,171,1) 0%, rgba(30,140,147,1) 19%, rgba(79,176,128,1) 38%, rgba(100,139,206,1) 58%, rgba(99,49,226,1) 80%, rgba(12,36,240,1) 100%);         
     }
+
+
+    .overlay {
+        background: linear-gradient(0deg, rgba(79,176,128,1) 38%, rgba(100,139,206,1) 58%, rgba(99,49,226,1) 80%, rgba(12,36,240,1) 100%);         
+        height: 100vh;
+        width: 100vw;
+        top: 0;
+        left: 0;
+        position: fixed;
+        z-index: 9;     
+        transform: translateY(-100vh);
+        transition: 350ms ease-in;           
+    }
+
     h1 {
     	color: #fff;
     }
@@ -40,7 +54,7 @@ background: linear-gradient(0deg, rgba(38,54,171,1) 0%, rgba(30,140,147,1) 19%, 
         grid-auto-rows: 1fr;			
     }
 
-    .grid div {
+    .project {
 		background-color: #f0eff5;
 		border-radius: 5px;
 		border: 1px solid #ddd;
@@ -49,24 +63,25 @@ background: linear-gradient(0deg, rgba(38,54,171,1) 0%, rgba(30,140,147,1) 19%, 
 		height: 100%;
 		justify-content: space-between;
 		padding: 1rem;
-		position: relative;
 		text-align: center;
+        opacity: 1;
+        transition: all ease-out 1s;
 		/* margin: 1em 0; */
     }
 
-    .grid div:hover {
+    .project:hover {
 		background-color: #fff;
     	transition: all ease 0.5s;
     	border: 1px solid #5d30e3;
 	}
 
-	.grid div:hover h2 {
+	.project:hover h2 {
 		color: #37e7f3;
 		transition: all ease 0.750s;
 	}
 	
 
-    .grid div h2 { 
+    .project h2 { 
     	font-size: 275%;
     	font-weight: 900;
     	color: #0a7bf8;
@@ -74,15 +89,16 @@ background: linear-gradient(0deg, rgba(38,54,171,1) 0%, rgba(30,140,147,1) 19%, 
     	margin-bottom: 0;
 	}
 
-	.grid div h3 { 
+	.project h3 { 
 		font-weight: 200;
 		font-size: 150%;
 		margin-top: 0px;
 		margin-top: 0;
 		color: #3187f1;
 	}
-
-	.grid div .button { 	
+    
+    button.button,
+	.project .button { 	
         background-color: #2728ec;
         border-radius: 5px;
         border: #1826ee 1px solid;
@@ -97,12 +113,19 @@ background: linear-gradient(0deg, rgba(38,54,171,1) 0%, rgba(30,140,147,1) 19%, 
         text-decoration: none;
         text-transform: uppercase;
 	}
-
-		.grid div .button:hover { 
+        button.button:hover,
+		.project .button:hover { 
 			background-color: #7d07ff;
 			color: #fff;
 			transition: all ease 0.5s;
 		}	
+
+    button.button {
+        border: 1px solid #785ecf;
+        border-radius: 4px;
+        margin: 0 0.5rem 1rem;
+        cursor: pointer;
+    }        
 
 	ul li {
 		color: #9c9c9c;
@@ -178,7 +201,6 @@ background: linear-gradient(0deg, rgba(38,54,171,1) 0%, rgba(30,140,147,1) 19%, 
     }    
 
     @media (min-width: 500px) {
-
         .grid div {
             padding: 2rem;
         }
