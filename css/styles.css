@@ -1,0 +1,148 @@
+/**
+ * ===================================
+ *  style sheet for portfolio
+ *
+ * author: Brian Barthold
+ * url: https://www.digitalbart.com/projects/
+ * repo: https://github.com/digitalbart/project-12-online-portfolio
+ * ===================================
+ */
+
+* {
+	  box-sizing: border-box;
+	}    
+
+    body {
+    	font-family: 'Roboto', sans-serif;
+ background: rgb(38,54,171);
+background: linear-gradient(0deg, rgba(38,54,171,1) 0%, rgba(30,140,147,1) 19%, rgba(79,176,128,1) 38%, rgba(100,139,206,1) 58%, rgba(99,49,226,1) 80%, rgba(12,36,240,1) 100%); 
+    }
+    h1 {
+    	color: #fff;
+    }
+	h1,h2,h3 {
+		font-family: 'Work Sans', sans-serif;
+		font-weight: 900;
+	}
+	a, p {
+		font-family: 'Roboto', sans-serif;
+	}
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column-gap: 2rem;
+        grid-row-gap: 2rem;
+		max-width: 1280px;
+		margin: 1em auto;	
+        align-items: center;
+        justify-content: center;  
+        grid-auto-rows: 1fr;			
+    }
+
+    .grid div {
+		background-color: #f0eff5;
+		border-radius: 5px;
+		border: 1px solid #ddd;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		justify-content: space-around;
+		padding: 1rem;
+		position: relative;
+		text-align: center;
+		/* margin: 1em 0; */
+    }
+
+    .grid div:hover {
+		background-color: #fff;
+    	transition: all ease 0.5s;
+    	border: 1px solid #5d30e3;
+	}
+
+	.grid div:hover h2 {
+		color: #37e7f3;
+		transition: all ease 0.750s;
+	}
+	
+
+    .grid div h2 { 
+    	font-size: 275%;
+    	font-weight: 900;
+    	color: #0a7bf8;
+    	text-transform: uppercase;
+    	margin-bottom: 0;
+	}
+
+	.grid div h3 { 
+		font-weight: 200;
+		font-size: 150%;
+		margin-top: 0px;
+		margin-top: 0;
+		color: #3187f1;
+	}
+
+	.grid div .button { 	
+        background-color: #2728ec;
+        border-radius: 5px;
+        border: #1826ee 1px solid;
+        color: #333;
+        color: #fff;
+        display: inline-block;
+        font-family: 'work sans';
+        font-weight: 700;
+        margin: auto 1em 1em;
+        padding: 1em 2em;
+        position: relative;
+        text-decoration: none;
+        text-transform: uppercase;
+	}
+
+		.grid div .button:hover { 
+			background-color: #7d07ff;
+			color: #fff;
+			transition: all ease 0.5s;
+		}	
+
+	ul li {
+		color: #9c9c9c;
+		font-size: 14px;
+		text-align: left;
+	}
+
+    header {
+    	text-align: center;
+    }
+    header h1 {
+    	font-weight: 200;
+    	font-size: 400%;
+    }
+
+    footer {
+    	margin: 2em;
+    	text-align: center;
+    	color: #fff;
+    }
+
+    footer a {
+    	color: #fff;
+    }
+
+    footer img {
+    	max-height: 30px;
+    	vertical-align: middle;
+    	padding-left: 0.5em;
+    	padding-right: 0.25em;
+    }
+
+    @media (min-width: 675px) {
+		.grid {
+			grid-template-columns: repeat(2, 1fr);		
+		}
+	}
+
+    @media (min-width: 1100px) {
+		.grid {
+			grid-template-columns: repeat(3, 1fr);		
+		}
+	}	
