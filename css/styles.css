@@ -141,22 +141,26 @@
     	font-size: 400%;
     }
 
-    img {
+    .project img {
         max-width: 100%; 
-        border: 1px solid #ccc;  
-        border-radius: 5px; 
-        margin: 1rem 0; 
+
         position: relative;  
         transition: all 1s;
     }
 
-    a {    
+    .project a {    
         overflow: hidden;
     }
 
-    a img:hover { 
+    .project img:hover { 
         transform: scale(1.2);   
-    }    
+    }   
+
+    .project a {
+        border: 1px solid #ccc;  
+        border-radius: 5px; 
+        margin: 1rem 0;      
+    }
 
 
     footer {
